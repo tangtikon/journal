@@ -5,4 +5,3 @@ $conn = mysqli_connect('localhost','root','','db_journal');
 //     die("Cannot connect to the database. Error: ".mysqli_error($conn));
 // }
 ?>
-ss

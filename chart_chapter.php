@@ -1,5 +1,5 @@
 <?php
-include("connect.php");
+
 
 
 $rs = $conn->query("select YEAR(date_open),MONTH(date_open),count(id) 

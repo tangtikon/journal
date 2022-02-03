@@ -33,7 +33,7 @@
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <div class="text-center">
-                                <img class="ed" src="http://localhost/journal-manage/file_editorial/<?php echo $photo; ?>" style="width:200px;height:200px;" alt="Card image cap">
+                                <img class="ed" src="manage/file_editorial/<?php echo $photo; ?>" style="width:200px;height:200px;" alt="Card image cap">
                                 <br><br>
                                 <div class="text-center">
                                     <div class="txt_content1"><?php echo  $name_surname; ?></div>

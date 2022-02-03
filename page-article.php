@@ -12,7 +12,7 @@
     <div class="container mx-auto mt-6">
         <div class="row">
             <?php
-            $query = mysqli_query($conn, "select * from article ORDER BY id_arti DESC ") or die(mysqli_error($conn));
+            $query = mysqli_query($conn, "select id_arti,title_year,title_issue,mon_start,mon_end,year,file_image,pdf_full_file,date_publish from article ORDER BY id_arti DESC ") or die(mysqli_error($conn));
             while ($row = mysqli_fetch_array($query)) {
                 $id_arti = $row['id_arti'];
                 $title_year = $row['title_year'];
@@ -32,7 +32,7 @@
                                 <input type="hidden" name="txt_ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
                                 <div class="text-center">
                                     <button class="btn-link" type="submit">
-                                        <img class="img_article" src="http://localhost/journal-manage/files_image/<?php echo $file_image; ?>" style="width:248px;height:350.8px;" alt="Card image cap">
+                                        <img class="img_article" src="manage/files_image/<?php echo $file_image; ?>" style="width:248px;height:350.8px;" alt="Card image cap">
                                     </button>
                                     <br><br>
                                     <button class="btn-link" type="submit">

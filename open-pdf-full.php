@@ -18,7 +18,7 @@
 
     ?>
     <title><?php echo $title; ?></title>
-    <iframe height="100%" width="100%" frameBorder="0" scrolling="0" src="http://localhost/journal-manage/files_pdf/<?php echo $file; ?>"></iframe>
+    <iframe height="100%" width="100%" frameBorder="0" scrolling="0" src="manage/files_pdf/<?php echo $file; ?>"></iframe>
     <?php
 
 

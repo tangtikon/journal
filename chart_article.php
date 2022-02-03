@@ -1,5 +1,4 @@
 <?php
-include("connect.php");
 
 
 $rs = $conn->query("select YEAR(date_view),MONTH(date_view),count(id) 

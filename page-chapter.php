@@ -13,7 +13,7 @@ include('connect.php');
 
          <?php
          $id_article = $_POST["id"];
-         $query = mysqli_query($conn, "select * from article where id_arti=$id_article ") or die(mysqli_error($conn));
+         $query = mysqli_query($conn, "select * from article where id_arti=$id_article ORDER BY id_arti") or die(mysqli_error($conn));
          while ($row = mysqli_fetch_array($query)) {
             $id_arti = $row['id_arti'];
             $title_year = $row['title_year'];
@@ -30,7 +30,7 @@ include('connect.php');
             <div class="text-center"><br>
                <div class="txt_header"><?php echo "ปีที่ ", $title_year, " ฉบับที่ ", $title_issue, " : ", $mon_start, " - ", $mon_end, " ", $year ?> </div>
                <br>
-               <a href="#"><img class="img_chapter" src="http://localhost/journal-manage/files_image/<?php echo $file_image ?>" style="width:354.2px;height:501.1px;"></a><br><br>
+               <a href="#"><img class="img_chapter" src="manage/files_image/<?php echo $file_image ?>" style="width:354.2px;height:501.1px;"></a><br><br>
                <div class="txt_type">เผยแพร่แล้ว: <?php echo $date_publish ?></div>
                <br><br>
             </div>
