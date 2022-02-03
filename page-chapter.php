@@ -13,7 +13,7 @@ include('connect.php');
 
          <?php
          $id_article = $_POST["id"];
-         $query = mysqli_query($conn, "select * from article where id_arti=$id_article ORDER BY id_arti") or die(mysqli_error($conn));
+         $query = mysqli_query($conn, "select id_arti,title_year,title_issue,mon_start,mon_end,year,file_image,pdf_full_file,date_publish from article where id_arti=$id_article ORDER BY id_arti") or die(mysqli_error($conn));
          while ($row = mysqli_fetch_array($query)) {
             $id_arti = $row['id_arti'];
             $title_year = $row['title_year'];
@@ -57,7 +57,8 @@ include('connect.php');
          <?php } ?>
 
          <?php
-         $query = mysqli_query($conn, "select * from chapter WHERE id_article=$id_article ORDER BY id ASC") or die(mysqli_error($conn));
+         $query = mysqli_query($conn, "select id,type,title,author,workplace,keyword,abstract,refer,page,file_name,id_article
+          from chapter WHERE id_article=$id_article ORDER BY id ASC") or die(mysqli_error($conn));
          while ($row = mysqli_fetch_array($query)) {
             $id = $row['id'];
             $type = $row['type'];
