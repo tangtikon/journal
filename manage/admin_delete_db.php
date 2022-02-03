@@ -10,7 +10,7 @@ if(!empty($_GET['id']))
   if($rs)
   {
     echo '<script> alert("Data Deleted"); </script>';
-    header("Location:page-admin");
+    header("Location:page-admin.php");
   }
   else {
     echo '<script> alert("Data Not Deleted"); </script>';

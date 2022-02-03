@@ -12,16 +12,16 @@ if(!empty($_GET['id']))
   if($rs)
   {
     echo '<script> alert("Data Deleted"); </script>';
-    header("Location: chapter?id_article=$id_article"); 
+    header("Location: chapter.php?id_article=$id_article"); 
     // echo $id;
     
   }
   else {
     echo '<script> alert("Data Not Deleted"); </script>';
-    header("Location: chapter?id_article=$id_article"); 
+    header("Location: chapter.php?id_article=$id_article"); 
   }
 }
 else{
     echo '<script> alert("Data Not Deleted "); </script>';
-    header("Location: chapter?id_article=$id_article"); 
+    header("Location: chapter.php?id_article=$id_article"); 
 }

@@ -11,15 +11,15 @@ if(!empty($_GET['id_arti']))
   if($rs)
   {
     echo '<script> alert("Data Deleted"); </script>';
-    header("Location:article");
+    header("Location:article.php");
     
   }
   else {
     echo '<script> alert("Data Not Deleted"); </script>';
-    header("Location:article");
+    header("Location:article.php");
   }
 }
 else{
     echo '<script> alert("Data Not Deleted "); </script>';
-    header("Location:article");
+    header("Location:article.php");
 }

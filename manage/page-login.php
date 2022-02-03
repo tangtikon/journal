@@ -6,8 +6,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/icon.png" type="image/icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="icon" href="img/icon.png" type="image/icon">
    <!--ห้ามลบ-->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -96,7 +96,7 @@
                            <input class="form-control" type="text" id="txt_username" name="txt_username" placeholder="ชื่อผู้ใช้" required="true">
                         </div>
                      </div>
-                     
+
                      <div class="form-group">
                         <div class="col col-offset-6">
                            <input class="form-control" type="password" id="txt_password" name="txt_password" placeholder="รหัสผ่าน" required="true">
@@ -109,7 +109,7 @@
                            <button class="btn btn-block btn-download color-text " id="bt">ยืนยัน</button>
                         </div>
                      </div>
-
+                     
                   </form>
                </div>
             </div>

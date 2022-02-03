@@ -13,13 +13,15 @@ if (!empty($username) && !empty($password)) {
     while ($row = $result->fetch_assoc()) {
       $_SESSION['name'] = $row["name"];
       $_SESSION['surname'] = $row["surname"];
+
       $level = $row["level"];
+      $_SESSION['level'] = $level;
     }
     if ($level == 'a' || $level == 'A') {
-      header('location:page-admin');
+      header('location:page-user.php');
     }
     if ($level == 'u' || $level == 'U') {
-      header('location:article');
+      header('location:article.php');
     }
   } else {
     include("page-login-fail.php");

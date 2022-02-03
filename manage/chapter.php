@@ -409,7 +409,7 @@ include('chapter_add_db.php');
                                 <td class="hide-on-screen"><?php echo $refer; ?></td>
                                 <td><?php echo $page; ?></td>
                                 <td class="hide-on-screen"><?php echo $id_article; ?></td>
-                                <td><a href="http://localhost/manage/files_pdf_chapter/<?php echo $file_name; ?>" target="_blank"><?php echo $file_name; ?></a></td>
+                                <td><a href="files_pdf_chapter/<?php echo $file_name; ?>" target="_blank"><?php echo $file_name; ?></a></td>
 
 
 

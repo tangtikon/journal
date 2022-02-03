@@ -28,10 +28,10 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="article">จัดการวารสาร</a>
+                    <a class="nav-link" href="article.php">จัดการวารสาร</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="editorial">จัดการทีมบรรณาธิการ</a>
+                    <a class="nav-link" href="editorial.php">จัดการทีมบรรณาธิการ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="http://localhost/kkpho-journal/page-article">ดูเว็บไซต์หลัก</a>

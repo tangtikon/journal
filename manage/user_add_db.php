@@ -15,13 +15,13 @@ if (isset($_POST['submit']) != "") {
     }
     
     if ($check > 0) /* ตรวจสอบว่า Id นี้มีอยู่หรือยัง */ {
-        header("Location: user_add_fail");
+        header("Location: user_add_fail.php");
         echo "ซ้ำ";
         exit();
     } else {
         $query = $conn->query("INSERT INTO member (username,password,name,surname,level) VALUES ('$username','$password','$name','$surname','u')");
         if ($query) {
-            header("Location: page-user");
+            header("Location: page-user.php");
             echo "ไม่ซ้ำ";
         } else {
             die(mysqli_error($conn));

@@ -15,7 +15,7 @@ if (isset($_POST['updatedata']) != "") {
     ,name = '$name' ,surname = '$surname',level = 'a'  WHERE id='$id'");
     echo $query;
     if ($query) {
-        header("Location: page-admin");
+        header("Location: page-admin.php");
     } else {
         die(mysqli_error($conn));
     }

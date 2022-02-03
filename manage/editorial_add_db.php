@@ -25,7 +25,7 @@ if(isset($_POST['submit'])!=""){
     $query=$conn->query("INSERT INTO editorial (name_surname,rank,workplace,role_main,role_sec,photo) VALUES ('$name_surname','$rank','$workplace','$role_main','$role_sec','$file_name')");
     if($query){
       
-      header("Location: editorial"); 
+      header("Location: editorial.php"); 
     }
     else{
       die(mysqli_error($conn));

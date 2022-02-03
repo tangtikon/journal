@@ -293,8 +293,8 @@ include('article_add_db.php');
                                 <td class="hide-on-screen"><?php echo $file_image; ?></td>
                                 <td class="hide-on-screen"><?php echo $pdf_file; ?></td>
 
-                                <td><img src="http://localhost/manage/files_image/<?php echo $file_image; ?>" style="width:45px;height:66.75px;"></td>
-                                <td><a href="http://localhost/manage/files_pdf/<?php echo $pdf_file; ?>" target="_blank"><?php echo $pdf_file; ?></a></td>
+                                <td><img src="files_image/<?php echo $file_image; ?>" style="width:45px;height:66.75px;"></td>
+                                <td><a href="files_pdf/<?php echo $pdf_file; ?>" target="_blank"><?php echo $pdf_file; ?></a></td>
 
                                 <td>
                                     <button type="button" class="btn btn-lg btn-warning editbtn"><i class="bi bi-pencil-square"></i></button>

@@ -46,7 +46,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="text-center">
-                        <button type="button" class="btn btn-danger btn-lg " onclick="location.href='page-admin';" data-dismiss="modal">ตกลง</button>
+                        <button type="button" class="btn btn-danger btn-lg " onclick="location.href='page-admin.php';" data-dismiss="modal">ตกลง</button>
                     </div>
                 </div>
             </div>

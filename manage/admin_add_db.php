@@ -21,7 +21,7 @@ if (isset($_POST['submit']) != "") {
     } else {
         $query = $conn->query("INSERT INTO member (username,password,name,surname,level) VALUES ('$username','$password','$name','$surname','a')");
         if ($query) {
-            header("Location: page-admin");
+            header("Location: page-admin.php");
             echo "ไม่ซ้ำ";
         } else {
             die(mysqli_error($conn));

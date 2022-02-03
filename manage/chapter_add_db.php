@@ -30,7 +30,7 @@ if(isset($_POST['submit'])!=""){
      VALUES ('$txt_type','$title','$author','$workplace','$keyword','$abstract','$refer','$page','$file_pdf','$id_article')");
     if($query){
       
-      header("Location: chapter?id_article=$id_article"); 
+      header("Location: chapter.php?id_article=$id_article"); 
     }
     else{
       die(mysqli_error($conn));

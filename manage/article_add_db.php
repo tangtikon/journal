@@ -34,7 +34,7 @@ if (isset($_POST['submit']) != "") {
    VALUES ('$title_year','$title_issue','$mon_start','$mon_end','$year','$file_photo','$file_pdf')");
   echo $query;
   if ($query) {
-    header("Location: article");
+    header("Location: article.php");
   } else {
     die(mysqli_error($conn));
   }

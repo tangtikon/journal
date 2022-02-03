@@ -195,7 +195,7 @@ include('editorial_add_db.php');
                                     <td style="width: 5%"> ไม่มีภาพ </td>
                                 <?php } ?>
                                 <?php if (strlen($img) >= 19) { ?>
-                                    <td style="width: 5%"><img src="http://localhost/manage/file_editorial/<?php echo $img; ?>" style="width:50px;height:50px;"></td>
+                                    <td style="width: 5%"><img src="file_editorial/<?php echo $img; ?>" style="width:50px;height:50px;"></td>
                                 <?php } ?>
                                 <td style="width: 2%">
                                     <button type="button" class="btn btn-lg btn-warning editbtn"><i class="bi bi-pencil-square"></i></button>

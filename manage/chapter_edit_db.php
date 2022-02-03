@@ -87,7 +87,7 @@ if (isset($_POST['updatedata']) != "") {
 
     if ($query) {
         echo '<script> alert("Data Updated"); </script>';
-        header("Location: chapter?id_article=$id_article"); 
+        header("Location: chapter.php?id_article=$id_article"); 
     } else {
         echo "ไม่ถูกแก้ไข ";
 

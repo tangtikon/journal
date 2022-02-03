@@ -26,7 +26,7 @@ if (isset($_POST['updatedata']) != "") {
 
     if ($query) {
         echo '<script> alert("Data Updated"); </script>';
-        header("Location:editorial");
+        header("Location:editorial.php");
     } else {
         echo "ไม่ถูกแก้ไข ";
 
