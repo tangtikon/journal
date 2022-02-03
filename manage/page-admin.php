@@ -4,7 +4,7 @@ $check_level = $_SESSION['level'];
 
 if ($check_level == 'u' || $check_level == 'U') {
 
-    header('location:checklogout.php');
+    header('location:warn.php');
 }
 ?>
 
