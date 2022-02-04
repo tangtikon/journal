@@ -26,7 +26,9 @@
         $id_ch = $conn->escape_string($_POST["id_ch"]);
         $txt_ip = $conn->escape_string($_POST['txt_ip']);
 
-        $query = $conn->query("INSERT INTO count_open (ip,id_chap) VALUES ('$txt_ip','$id_ch')");
+        date_default_timezone_set('Asia/Bangkok');
+        $time_s = date("Y-m-d H:i:s");
+        $query = $conn->query("INSERT INTO count_open (ip,date_open,id_chap) VALUES ('$txt_ip','$time_s','$id_ch')");
 
 
         exit();

@@ -9,6 +9,7 @@ if (isset($_POST['updatedata']) != "") {
     $mon_start = $conn->escape_string($_POST['txt_mon_start']);
     $mon_end = $conn->escape_string($_POST['txt_mon_end']);
     $year = $conn->escape_string($_POST['txt_year']);
+    $date_publish = $conn->escape_string($_POST['txt_date_publish']);
 
     $date = date('Y-m-d H:i:s');
     $date = date_create();
@@ -31,41 +32,41 @@ if (isset($_POST['updatedata']) != "") {
         echo "if file_pdf";
         $file_pdf = strval(date_timestamp_get($date)) . "-full" . substr("$file_pdf", -4);
         $query = $conn->query("UPDATE article SET title_year = '$title_year' ,title_issue = '$title_issue'
-         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year' ,pdf_full_file = '$file_pdf'  WHERE id_arti='$id'");
+         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year', date_publish='$date_publish' ,pdf_full_file = '$file_pdf'  WHERE id_arti='$id'");
     }
     if (($_FILES['file_image']['name'] != "")){
         $file_photo = strval(date_timestamp_get($date)) . "-photo" . substr("$file_photo", -4);
         echo "if file_image";
         $file_pdf = strval(date_timestamp_get($date)) . "-full" . substr("$file_pdf", -4);
         $query = $conn->query("UPDATE article SET title_year = '$title_year' ,title_issue = '$title_issue'
-         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year' ,file_image = '$file_photo'  WHERE id_arti='$id'");
+         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year', date_publish='$date_publish' ,file_image = '$file_photo'  WHERE id_arti='$id'");
     }
     if (($_FILES['file_image']['name'] != "")&&($_FILES['file_pdf']['name'] != "")){
         echo "if 3";
         $file_pdf = strval(date_timestamp_get($date)) . "-full" . substr("$file_pdf", -4);
         $file_photo = strval(date_timestamp_get($date)) . "-photo" . substr("$file_photo", -4);
         $query = $conn->query("UPDATE article SET title_year = '$title_year' ,title_issue = '$title_issue'
-         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year'  ,file_image = '$file_photo' ,pdf_full_file = '$file_pdf' WHERE id_arti='$id'");
+         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year', date_publish='$date_publish'  ,file_image = '$file_photo' ,pdf_full_file = '$file_pdf' WHERE id_arti='$id'");
     }
     if (($_FILES['file_image']['name'] == "")&&($_FILES['file_pdf']['name'] == "")){
-        echo "if 4";
+        echo "if 4",$date_publish;
 
         $query = $conn->query("UPDATE article SET title_year = '$title_year' ,title_issue = '$title_issue'
-         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year'  WHERE id_arti='$id'");
+         ,mon_start = '$mon_start' ,mon_end = '$mon_end',year = '$year', date_publish ='$date_publish'  WHERE id_arti='$id'");
     }
 
 
     move_uploaded_file($temp1, "files_pdf/" . $file_pdf);
     move_uploaded_file($temp2, "files_image/" . $file_photo);
 
-
+    echo "<br>",$temp2;
 
 
     
 
     if ($query) {
         echo '<script> alert("Data Updated"); </script>';
-        header("Location:article.php");
+        // header("Location:article.php");
     } else {
         echo "ไม่ถูกแก้ไข ";
 

@@ -9,7 +9,7 @@ include('style_view.php');
     $id_chapter = $_POST["id"];
     $id_article = $_POST["id_article"];
 
-    $query = mysqli_query($conn, "select * from chapter where id = $id_chapter  ") or die(mysqli_error($conn));
+    $query = mysqli_query($conn, "select * from chapter where id = $id_chapter ORDER BY id") or die(mysqli_error($conn));
     while ($row = mysqli_fetch_array($query)) {
         $id = $row['id'];
         $title = $row['title'];
@@ -45,7 +45,7 @@ include('style_view.php');
 
             <div class="col col-lg-5">
                 <div class="text-center">
-                    <?php $query2 = mysqli_query($conn, "select * from article where id_arti=$id_article ") or die(mysqli_error($conn));
+                    <?php $query2 = mysqli_query($conn, "select * from article where id_arti=$id_article ORDER BY id_arti") or die(mysqli_error($conn));
                     while ($row = mysqli_fetch_array($query2)) {
                         $img = $row['file_image'];
                         $pdf_file = $row['pdf_full_file'];

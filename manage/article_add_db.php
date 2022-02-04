@@ -30,8 +30,8 @@ if (isset($_POST['submit']) != "") {
 
 
 
-  $query = $conn->query("INSERT INTO article (title_year,title_issue,mon_start,mon_end,year,file_image,pdf_full_file)
-   VALUES ('$title_year','$title_issue','$mon_start','$mon_end','$year','$file_photo','$file_pdf')");
+  $query = $conn->query("INSERT INTO article (title_year,title_issue,mon_start,mon_end,year,date_publish,file_image,pdf_full_file)
+   VALUES ('$title_year','$title_issue','$mon_start','$mon_end','$year','$date_publish','$file_photo','$file_pdf')");
   echo $query;
   if ($query) {
     header("Location: article.php");

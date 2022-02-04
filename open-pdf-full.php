@@ -26,7 +26,9 @@
         $id_arti = $conn->escape_string($_POST["id_arti"]);
         $txt_ip = $conn->escape_string($_POST['txt_ip']);
 
-        $query = $conn->query("INSERT INTO count_open_full (ip,id_article) VALUES ('$txt_ip','$id_arti')");
+        date_default_timezone_set('Asia/Bangkok');
+        $time_s = date("Y-m-d H:i:s");
+        $query = $conn->query("INSERT INTO count_open_full (ip,date_full,id_article) VALUES ('$txt_ip','$time_s','$id_arti')");
 
 
         exit();
