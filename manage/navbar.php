@@ -55,7 +55,7 @@
                         คู่มือการใช้งาน
                     </div>
                 </a>
-                <a class="dropdown-item" href="checklogout">
+                <a class="dropdown-item" href="checklogout.php">
                     <div class="nav_a">
                         ออกจากระบบ
                     </div>

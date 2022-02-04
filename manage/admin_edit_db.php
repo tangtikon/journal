@@ -10,16 +10,23 @@ if (isset($_POST['updatedata']) != "") {
     $name = $conn->escape_string($_POST['txt_name']);
     $surname = $conn->escape_string($_POST['txt_surname']);
 
-
-    $query = $conn->query("UPDATE member SET username = '$username' ,password = '$password'
-    ,name = '$name' ,surname = '$surname',level = 'a'  WHERE id='$id'");
-    echo $query;
-    if ($query) {
-        header("Location: page-admin.php");
-    } else {
-        die(mysqli_error($conn));
+    $rs = $conn->query("select * from member where username ='$username' and level ='u'");
+    while ($row = $rs->fetch_array()) {
+        $check =  $row['username'];
     }
-    exit();
-
-    
+    if ($check > 0) /* ตรวจสอบว่า Id นี้มีอยู่หรือยัง */ {
+        header("Location: admin_add_fail.php");
+        echo "ซ้ำ";
+        exit();
+    } else {
+        $query = $conn->query("UPDATE member SET username = '$username' ,password = '$password'
+    ,name = '$name' ,surname = '$surname',level = 'a'  WHERE id='$id'");
+        echo $query;
+        if ($query) {
+            header("Location: page-admin.php");
+        } else {
+            die(mysqli_error($conn));
+        }
+        exit();
+    }
 }
