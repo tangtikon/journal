@@ -6,8 +6,8 @@ include('style_view.php');
 
 <body>
     <?php
-    $id_chapter = $_POST["id"];
-    $id_article = $_POST["id_article"];
+    $id_chapter = $_GET["chapter"];
+    $id_article = $_GET["issue"];
 
     $query = mysqli_query($conn, "select * from chapter where id = $id_chapter ORDER BY id") or die(mysqli_error($conn));
     while ($row = mysqli_fetch_array($query)) {
@@ -52,7 +52,7 @@ include('style_view.php');
                         $date_publish = $row['date_publish'];
                     } ?>
                     <br><br>
-                    <img class="img_view" src="manage/files_image/<?php echo $img; ?>" style="width:300px;height:397px;" alt="Card image cap"><br><br>
+                    <img class="img_view" src="http://localhost/journal/manage/files_image/<?php echo $img; ?>" style="width:300px;height:397px;" alt="Card image cap"><br><br>
 
                     <form class="form-inline my-2 my-lg-0" action="open-pdf.php" method="POST" id="myForm" target="_blank">
                         <input type="hidden" name="id_ch" value="<?php echo $id ?>">

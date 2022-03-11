@@ -1,4 +1,4 @@
 <?php 
-header('Location: page-article.php');
+header('Location: page/article.php');
 exit;
 ?>

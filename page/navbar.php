@@ -47,22 +47,22 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active " aria-current="page" href="page-article.php">วารสาร</a>
+                        <a class="nav-link active " aria-current="page" href="article.php">วารสาร</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="page-ethics.php">จริยธรรมในการตีพิมพ์</a>
+                        <a class="nav-link active" aria-current="page" href="ethics.php">จริยธรรมในการตีพิมพ์</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="page-about.php">เกี่ยวกับวารสาร</a>
+                        <a class="nav-link active" aria-current="page" href="about.php">เกี่ยวกับวารสาร</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="page-editorial.php">ทีมบรรณาธิการ</a>
+                        <a class="nav-link active" aria-current="page" href="editorial.php">ทีมบรรณาธิการ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="page-contact.php">ติดต่อ</a>
+                        <a class="nav-link active" aria-current="page" href="contact.php">ติดต่อ</a>
                     </li>
-	    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="manage/page-login.php">สำหรับผู้ดูแลระบบ</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost/journal/manage/page-login.php">สำหรับผู้ดูแลระบบ</a>
                     </li>
                 </ul>
             </div>

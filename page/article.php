@@ -27,12 +27,12 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <form class="form-inline my-2 my-lg-0" action="page-chapter.php" method="POST" id="myForm">
-                                <input type="hidden" name="id" value="<?php echo $id_arti ?>">
+                            <form class="form-inline my-2 my-lg-0" action="chapter.php?issue=<?php echo $id_arti ?>" method="POST" id="myForm">
+                                
                                 <input type="hidden" name="txt_ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
                                 <div class="text-center">
                                     <button class="btn-link" type="submit">
-                                        <img class="img_article" src="manage/files_image/<?php echo $file_image; ?>" style="width:248px;height:350.8px;" alt="Card image cap">
+                                        <img class="img_article" src="http://localhost/journal/manage/files_image/<?php echo $file_image; ?>" style="width:248px;height:350.8px;" alt="Card image cap">
                                     </button>
                                     <br><br>
                                     <button class="btn-link" type="submit">

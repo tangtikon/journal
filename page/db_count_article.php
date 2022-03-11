@@ -1,7 +1,7 @@
 <?php
 
 if (!empty($_POST['txt_ip'])) {
-    $id_article = $_POST["id"];
+    $id_article = $_GET["issue"];
     $txt_ip = $conn->escape_string($_POST['txt_ip']);
     
     date_default_timezone_set('Asia/Bangkok');
